@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<body style="background-color: white;" onload="">
+    <img onmouseover="hover('null')" draggable="false" style="position: fixed;width: 100%; height: 100%; left: 0px; top: 0%;" src="bg-1.png" alt="background">
+    <div id="hover" style="display: none; position: fixed; width: 84px;height:94px;border:2px solid rgb(85, 85, 85); left: 15px; top: 15px; background-color: rgb(126, 126, 126); opacity: 0.4;"></div>
+    <img src="pc.png" id="pc" alt="" ondblclick="dblclicks()" onmouseover="hover('pc')" onclick="clicks('pc')" width="64px" style="position: fixed;left: 25px;top: 25px;">
+    <img src="visual_studio_code.png" id="visual" alt="" ondblclick="animationPhoto('pc.png')" onmouseover="hover('visual')" onclick="clicks('visual')" width="64px" style="position: fixed;left: 25px;top: 135px;">
+    <a style="position: fixed;left: 30px;top: 200px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: white;">visual...</a>
+    <a style="position: fixed;left: 35px;top: 90px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: white;">My Pc</a>
+    <!--<canvas onclick="" id="myCanvas" width="1100px" height="600px" style="border:1px solid rgb(92, 86, 86); position: fixed; left: 120px; top: 50px; background-color: rgb(46, 43, 43);">
+        Your browser does not support the HTML canvas tag.</canvas>-->
+        
+
+                <div id="windows-pc" style="position: fixed; width: 350px; height: 250px; display: block; top: 50px; left: 250px; opacity: 0.0; background-color: rgb(46, 41, 41); border: 1px solid rgb(83, 83, 83);"></div>
+                <div draggable="true" ondrag="moveFolder()" id="element-pc" style="width: 549px; left: 451px; position: fixed;top: 131px; background-color: rgb(31, 28, 28); height: 40px; opacity: 0.0;"></div>
+                <div draggable="false" id="element6-pc" style="width: 549px; left: 451px; position: fixed;top: 171px; background-color: rgb(39, 37, 36); height: 50px; opacity: 0.0;"></div>
+                <div id="element2-pc" style="width: 549px; left: 452px; position: fixed;top: 556px; background-color: rgb(58, 53, 53); height: 25px; opacity: 0.0;"></div>
+                <img onclick="closeFolder()" id="close" onmouseout="reset()" onmouseover="changeStatement('close')" src="close.png" alt="close" width="45px" title="close" style="position: fixed; left: 100px; opacity: 0.0;">
+                <img width="20px" id="element4-pc" title="My pc" src="pc2.png" style="position: fixed; left: 460px; top: 140px; opacity: 0.0;">
+                <a id="element5-pc" style=" position: fixed; left: 490px; top: 140px; opacity: 0.0; color: cornsilk; font-family: Arial, Helvetica, sans-serif; font-size: 17px;">My pc</a>
+                
+                <div id="element7-pc" class="container" title="C:/" style="opacity: 0.0; position: fixed; width: 330px; height: 30px; top: 181px; left: 650px; border: 1px solid gray;">
+                    <img width="20px" id="element4-pc" title="My pc" src="pc2.png">
+                    <a>ㅤMy pc</a></div>
+                <div id="folder">
+                    
+                </div>
+                <div id="textFolder">
+                    
+                </div>
+                <a style="opacity: 0.0; left: 460px; top: 562px; font-size: 12px; position: fixed; font-family: Arial, Helvetica, sans-serif; color: cornsilk;" id="element3-pc">0 items | </a>
+
+                <!--wait cursor-->
+                <div class="wait" id="wait" style=" position: fixed; width: 550px; height: 450px; display: block; top: 130px; left: 2450px; opacity: 0.0; background-color: rgb(46, 41, 41); border: 1px solid rgb(83, 83, 83);"></div>
+
+
+
+                <!--visual studio code-->
+                <div id="windows-visual" style="position: fixed; width: 350px; height: 250px; display: block; top: 50px; left: 2050px; opacity: 0.0; background-color: rgb(46, 41, 41); border: 1px solid rgb(83, 83, 83);"></div>
+
+
+
+
+                <!--photo-->
+                <div id="windows-image" style="position: fixed; width: 350px; height: 250px; display: block; top: 50px; left: 2550px; opacity: 0.0; background-color: rgb(46, 41, 41); border: 1px solid rgb(83, 83, 83);"></div>
+                <div draggable="true" ondrag="getPos()" ondragend="drgEnd('pc')" id="element-image" style="width: 549px; left: 4051px; position: fixed;top: 131px; background-color: rgb(31, 28, 28); height: 40px; opacity: 0.0;"></div>
+                <a id="te" style="position: fixed; left: 460px; top: 140px; font-size: 17px; font-family: Arial, Helvetica, sans-serif;color: honeydew; opacity: 0.0;">Photo - pc.png</a>
+                <img onclick="closePhoto()" id="closePhoto" onmouseout="reset()" onmouseover="changeStatement('closePhoto')" src="close.png" alt="close" width="45px" title="close" style="position: fixed; left: 100px; opacity: 0.0;">
+                <img class="left" id="imagew" src="" style="position: fixed; left: 100px; opacity: 1.0;" width="350px">
+                
+
+
+
+    <div id="bottom-bar"></div>
+    <div style="position: fixed; width:100%;height:5%;border:1px solid rgb(2, 7, 78); left: 0%; top: 95%; background-color: rgb(42, 44, 61);"></div>
+    
+    <img onmouseover="" onclick="clicks('pc')" src="windows.png" alt="windows" width="1.5%" style="background-color: blueviolet; position: fixed; top: 96%;left: 10px;">
+    <div style="position: fixed; color: white; top: 96.5%;left: 95%; font-family: Arial, Helvetica, sans-serif;" id="time">none</div>
+    <a id="load" style="position: fixed; left: 45%; top: 40%; font-family:Arial, Helvetica, sans-serif; color: cornsilk; opacity: 0.0;">working on it...</a>
+    
+</body>
+</html>

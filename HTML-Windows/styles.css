@@ -1,0 +1,28 @@
+.container {
+  position: fixed;
+}
+#clip {
+    
+    clip-path: inset(140px 140px 385px 1090px);
+  }
+.bottom-bar {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    top: 95px;
+    left: 0px;
+    color: white;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+}
+.container{
+  display: flex;
+  left: 10px;
+  color: white;
+  justify-content: flex-start;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+}
+.wait {
+  cursor: wait;
+}
